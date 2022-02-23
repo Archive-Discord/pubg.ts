@@ -1,17 +1,16 @@
 {
   "name": "pubg.ts",
   "version": "0.1.7",
-  "description": "A lightweight PUBG TypeScript API Wrapper",
+  "description": "BattleBot Pubg api",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nurodev/pubg.ts.git"
+    "url": "https://github.com/Archive-Discord/pubg.ts.git"
   },
-  "homepage": "https://github.com/nurodev/pubg.ts",
-  "bugs": "https://github.com/nurodev/pubg.ts/issues",
+  "homepage": "https://github.com/Archive-Discord/pubg.ts",
+  "bugs": "https://github.com/Archive-Discord/pubg.ts/issues",
   "author": {
-    "name": "nurodev",
-    "email": "me@nuro.dev",
-    "url": "https://nuro.dev"
+    "name": "Kisss",
+    "email": "kdh89811@gmail.com"
   },
   "keywords": [
     "api",
