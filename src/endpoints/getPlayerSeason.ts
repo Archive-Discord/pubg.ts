@@ -62,14 +62,19 @@ export async function getPlayerSeason({
 }: PlayerSeasonOptions): PlayerSeasonResponse {
   const seasonId = typeof season === "object" ? season.id : season;
 
-  if (ranked)
+  if (ranked) {
+    const response = await fetch<ApiPlayerSeasonResponse>({
+      ...rest,
+      endpoint: `players/${player}/seasons/${seasonId}/ranked`,
+    });
+  
+    if (response.error) return response;
+
     return {
-      data: null,
-      error: {
-        title: "Unimplemented",
-        detail: "Ranked player season stats are currently not supported",
-      },
+      data: handlePlayerSeasonData(response.data.data),
+      error: null,
     };
+  }
 
   if (Array.isArray(player)) {
     const fetchOptions = chunkify(player).map((chunk) => ({
